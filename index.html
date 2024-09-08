@@ -10,36 +10,35 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
 
         .container {
             width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .project {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
         }
 
         h2 {
             color: #2c3e50;
-            margin-bottom: 0;
         }
 
         p {
             font-size: 18px;
             line-height: 1.6;
             color: #333;
-            margin-top: 0;
         }
 
         a {
@@ -62,79 +61,100 @@
             margin-bottom: 10px;
         }
 
-        .visuals img {
-            max-width: 40%;
-            margin: 10px;
+        .visuals {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .visual-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .visuals img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .visuals .caption {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
         }
 
         .about-me {
-            width: 100%;
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
             margin-bottom: 20px;
-        }
-
-        .about-me h1 {
-            color: #fff;
-            font-size: 36px;
-        }
-
-        .about-me p {
-            font-size: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- About Me Section -->
-    <div class="about-me">
-        <h1>Alexis Vargas Portfolio</h1>
-        <p>Currently pursuing a degree in Computer Science at WGU. Transitioning from teaching physics to data science.</p>
-    </div>
-
-    <!-- Project 1 Container -->
     <div class="container">
-        <h2>Predictive Maintenance of Hydraulic Systems</h2>
-        <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
-        <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
-        <p><strong>Code:</strong> <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" target="_blank">View Project Repository</a></p>
-        <p><strong>Results:</strong> Forecasted sensor values to anticipate system behavior and detected anomalies to assist in preventive maintenance.</p>
-
-        <h3>Top 10 Most Important Features:</h3>
-        <ul class="important-features">
-            <li>Pressure_Sensor_30</li>
-            <li>Pressure_Sensor_6</li>
-            <li>Pressure_Sensor_56</li>
-            <li>Pressure_Sensor_13</li>
-            <li>Pressure_Sensor_11</li>
-            <li>Pressure_Sensor_17</li>
-            <li>Pressure_Sensor_5</li>
-            <li>Pressure_Sensor_58</li>
-            <li>Pressure_Sensor_34</li>
-            <li>Pressure_Sensor_7</li>
-        </ul>
-
-        <!-- Visuals Container -->
-        <div class="visual-container">
-            <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
-            <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
-            <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
-            <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
-            <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
-            <img src="https://i.imgur.com/WeTiE7E.png" alt="Manual SARIMA">
-            <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
-            <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
-            <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
+        <h1>Alexis Vargas Portfolio</h1>
+        <div class="about-me">
+            <p>Currently pursuing a degree in Computer Science at WGU. Transitioning from teaching physics to data science.</p>
         </div>
 
+        <div class="project">
+            <h2>Predictive Maintenance of Hydraulic Systems</h2>
+            <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
+            <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
+            <p><strong>Code:</strong> <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" target="_blank">View Project Repository</a></p>
+            <p><strong>Results:</strong> Forecasted sensor values to anticipate system behavior and detected anomalies to assist in preventive maintenance.</p>
+
+            <h3>Top 10 Most Important Features:</h3>
+            <ul class="important-features">
+                <li>Pressure_Sensor_30</li>
+                <li>Pressure_Sensor_6</li>
+                <li>Pressure_Sensor_56</li>
+                <li>Pressure_Sensor_13</li>
+                <li>Pressure_Sensor_11</li>
+                <li>Pressure_Sensor_17</li>
+                <li>Pressure_Sensor_5</li>
+                <li>Pressure_Sensor_58</li>
+                <li>Pressure_Sensor_34</li>
+                <li>Pressure_Sensor_7</li>
+            </ul>
+
+            <div class="visuals">
+                <div>
+                    <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
+                    <div class="caption">Anomalies detected for Pressure_Sensor_30</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
+                    <div class="caption">Auto ARIMA Forecast</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
+                    <div class="caption">Top Features Importance Bar Plot</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
+                    <div class="caption">Confusion Matrix</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
+                    <div class="caption">Manual ARIMA Forecast</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/WeTiE7E.png" alt="Manual SARIMA">
+                    <div class="caption">Manual SARIMA Forecast</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
+                    <div class="caption">Most Important Features</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
+                    <div class="caption">SARIMA Model Residuals</div>
+                </div>
+                <div>
+                    <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
+                    <div class="caption">Time Series for Pressure_Sensor_30</div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
