@@ -129,16 +129,6 @@
             text-align: center;
         }
 
-        .code-snippet {
-            background-color: var(--alabaster);
-            padding: 10px;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 16px;
-            color: var(--eerie-black);
-            overflow-x: auto;
-        }
-
     </style>
 </head>
 <body>
@@ -151,46 +141,20 @@
 
         <div class="project">
             <h2>Predictive Maintenance of Hydraulic Systems</h2>
-            <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data from a UCI dataset.</p>
+            <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
             <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
             <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" class="button" target="_blank">View Project Repository</a>
             <p><strong>Results:</strong> 
                 Using various sensor data points, we applied machine learning models to forecast potential failures. The SARIMA and ARIMA models helped predict time-series behavior, while the RandomForestClassifier identified the most important sensors. The system detected anomalies in pressure readings and offered insights into which sensors are most critical in predictive maintenance efforts.
             </p>
 
-            <!-- General Steps Overview with Code Snippets -->
+            <!-- General Steps Overview -->
             <h3><strong>Steps Taken:</strong></h3>
-            <p><strong>Step 1: Data Collection</strong> - We gathered sensor data from the hydraulic system, focusing on pressure, temperature, and flow measurements. This dataset was provided by UCI's machine learning repository.</p>
-            
-            <p><strong>Step 2: Data Cleaning</strong> - We handled missing values and filtered the dataset for anomalies. The goal was to ensure clean data for accurate model performance.
-            <div class="code-snippet">
-                <code>df.fillna(method='ffill', inplace=True)</code>
-            </div>
-            </p>
-            
-            <p><strong>Step 3: Exploratory Data Analysis (EDA)</strong> - We visualized and analyzed the raw data to understand trends and detect any missing or anomalous data points.
-            <div class="code-snippet">
-                <code>sns.heatmap(df.corr(), annot=True)</code>
-            </div>
-            </p>
-            
-            <p><strong>Step 4: Feature Engineering</strong> - We prepared the data by generating additional features and selecting the most relevant ones for modeling.
-            <div class="code-snippet">
-                <code>df['rolling_mean'] = df['Pressure_Sensor_30'].rolling(window=5).mean()</code>
-            </div>
-            </p>
-
-            <p><strong>Step 5: Model Development</strong> - ARIMA and SARIMA models were used for time-series forecasting, and a RandomForestClassifier was trained to predict failures.
-            <div class="code-snippet">
-                <code>model = SARIMAX(df['Pressure_Sensor_30'], order=(1,1,1), seasonal_order=(1,1,1,12))</code>
-            </div>
-            </p>
-
-            <p><strong>Step 6: Model Evaluation</strong> - We assessed model performance using classification metrics and fine-tuned the models to improve accuracy.
-            <div class="code-snippet">
-                <code>accuracy = accuracy_score(y_test, y_pred)</code>
-            </div>
-            </p>
+            <p><strong>Data Collection:</strong> We gathered sensor data from the hydraulic system, focusing on pressure, temperature, and flow measurements.</p>
+            <p><strong>Exploratory Data Analysis (EDA):</strong> We visualized and analyzed the raw data to understand trends and detect any missing or anomalous data points.</p>
+            <p><strong>Feature Engineering:</strong> We prepared the data by generating additional features and selecting the most relevant ones for modeling.</p>
+            <p><strong>Model Development:</strong> ARIMA and SARIMA models were used for time-series forecasting, and a RandomForestClassifier was trained to predict failures.</p>
+            <p><strong>Model Evaluation:</strong> We assessed model performance using classification metrics and fine-tuned the models to improve accuracy.</p>
 
             <h3>Top 10 Most Important Features:</h3>
             <ul class="important-features-grid">
@@ -224,7 +188,6 @@
                     <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
                     <p><strong>Findings:</strong> This matrix demonstrated the model's high accuracy in classifying system states, with very few false positives and negatives.</p>
                 </div>
-                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
                     <p><strong>Findings:</strong> Fine-tuning the ARIMA model allowed us to significantly improve the forecasting accuracy for the hydraulic system.</p>
