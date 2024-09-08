@@ -16,6 +16,7 @@
             width: 80%;
             margin: auto;
             padding: 20px;
+            text-align: center;
         }
 
         h1 {
@@ -29,10 +30,9 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
-        h2 {
+        h2, h3 {
             color: #2c3e50;
         }
 
@@ -45,7 +45,6 @@
         a {
             color: #2980b9;
             text-decoration: none;
-            font-weight: bold;
         }
 
         a:hover {
@@ -63,9 +62,22 @@
             margin-bottom: 10px;
         }
 
-        .visuals img {
-            max-width: 80%;
-            margin-top: 20px;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
         }
 
         .button {
@@ -88,44 +100,76 @@
 
     <div class="container">
         <h1>Welcome to My Data Science Portfolio</h1>
-        <p>Here, I showcase some of my data science projects, including predictive maintenance and other analyses.</p>
+        <p>Hi, I'm Alexis Vargas! I am currently transitioning from a career in teaching high school physics to data science. I’m pursuing a degree in Computer Science from WGU and have developed a solid foundation in data analysis, machine learning, and programming. I bring over three years of experience in curriculum design and instructional coaching, which has shaped my problem-solving abilities and leadership skills.</p>
 
-        <div class="project">
-            <h2>Predictive Maintenance of Hydraulic Systems</h2>
-            <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
-            <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
-            <p><strong>Code:</strong> <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" target="_blank">View Project Repository</a></p>
-            <p><strong>Results:</strong> Forecasted sensor values to anticipate system behavior and detected anomalies to assist in preventive maintenance.</p>
+        <h2>Professional Experience</h2>
+        <p><strong>Physics Teacher</strong> – Anaheim High School (2021 - Present)</p>
+        <p>Led physics instruction for 10th-12th grades and integrated project-based learning to enhance student engagement. Coached educators on best practices in NGSS and science instruction, developing a culture of collaboration and continuous improvement.</p>
+        
+        <p><strong>Curriculum Designer Consultant</strong> – BSCS Science Learning (2023 - 2024)</p>
+        <p>Authored the OpenSciEd Physics Curriculum and collaborated with cross-functional teams to ensure the successful execution of instructional design projects. Managed project timelines and fostered inclusive team environments.</p>
 
-            <h3>Top 10 Most Important Features:</h3>
-            <ul class="important-features">
-                <li>Pressure_Sensor_30</li>
-                <li>Pressure_Sensor_6</li>
-                <li>Pressure_Sensor_56</li>
-                <li>Pressure_Sensor_13</li>
-                <li>Pressure_Sensor_11</li>
-                <li>Pressure_Sensor_17</li>
-                <li>Pressure_Sensor_5</li>
-                <li>Pressure_Sensor_58</li>
-                <li>Pressure_Sensor_34</li>
-                <li>Pressure_Sensor_7</li>
-            </ul>
+        <h2>Predictive Maintenance of Hydraulic Systems</h2>
+        <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
+        <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
+        <p><strong>Code:</strong> <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" target="_blank">View Project Repository</a></p>
+        <p><strong>Results:</strong> Forecasted sensor values to anticipate system behavior and detected anomalies to assist in preventive maintenance.</p>
 
-            <h3>Visuals from the Project:</h3>
-            <div class="visuals">
-               <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
-                <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
-                <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
-                <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
-                <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
-                <img src="https://i.imgur.com/WeTiE7E.png" alt="Manual SARIMA">
-                <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
-                <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
-                <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
+        <h3>Top 10 Most Important Features:</h3>
+        <ul class="important-features">
+            <li>Pressure_Sensor_30</li>
+            <li>Pressure_Sensor_6</li>
+            <li>Pressure_Sensor_56</li>
+            <li>Pressure_Sensor_13</li>
+            <li>Pressure_Sensor_11</li>
+            <li>Pressure_Sensor_17</li>
+            <li>Pressure_Sensor_5</li>
+            <li>Pressure_Sensor_58</li>
+            <li>Pressure_Sensor_34</li>
+            <li>Pressure_Sensor_7</li>
+        </ul>
+
+        <h3>Visuals from the Project:</h3>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
+                <p><strong>Analysis:</strong> Identifies potential anomalies in sensor data that might predict system failures.</p>
             </div>
-
-            <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" class="button" target="_blank">View Project on GitHub</a>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
+                <p><strong>Analysis:</strong> Forecasts sensor values using the Auto ARIMA model for time-series analysis.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
+                <p><strong>Analysis:</strong> Highlights the most important features for predicting system failures.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
+                <p><strong>Analysis:</strong> Shows the model's classification accuracy and performance.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
+                <p><strong>Analysis:</strong> Forecasts sensor values using a manually tuned ARIMA model.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/WeTiE7E.png" alt="Manual SARIMA">
+                <p><strong>Analysis:</strong> Implements SARIMA to handle seasonality in time-series forecasting.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
+                <p><strong>Analysis:</strong> The most critical features contributing to failure prediction were highlighted by the RandomForest model.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
+                <p><strong>Analysis:</strong> Residuals from the SARIMA model show how well the model fits the time-series data.</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
+                <p><strong>Analysis:</strong> Visualizes the overall time-series data for the sensors in the hydraulic system.</p>
+            </div>
         </div>
+
+        <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" class="button" target="_blank">View Project on GitHub</a>
     </div>
 
 </body>
