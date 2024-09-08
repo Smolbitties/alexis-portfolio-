@@ -79,7 +79,10 @@
         }
 
         .visuals img {
-            max-width: 100%;
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain; /* Ensure the image scales while keeping aspect ratio */
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
@@ -148,14 +151,6 @@
                 Using various sensor data points, we applied machine learning models to forecast potential failures. The SARIMA and ARIMA models helped predict time-series behavior, while the RandomForestClassifier identified the most important sensors. The system detected anomalies in pressure readings and offered insights into which sensors are most critical in predictive maintenance efforts.
             </p>
 
-            <!-- General Steps Overview -->
-            <h3><strong>Steps Taken:</strong></h3>
-            <p><strong>Data Collection:</strong> We gathered sensor data from the hydraulic system, focusing on pressure, temperature, and flow measurements.</p>
-            <p><strong>Exploratory Data Analysis (EDA):</strong> We visualized and analyzed the raw data to understand trends and detect any missing or anomalous data points.</p>
-            <p><strong>Feature Engineering:</strong> We prepared the data by generating additional features and selecting the most relevant ones for modeling.</p>
-            <p><strong>Model Development:</strong> ARIMA and SARIMA models were used for time-series forecasting, and a RandomForestClassifier was trained to predict failures.</p>
-            <p><strong>Model Evaluation:</strong> We assessed model performance using classification metrics and fine-tuned the models to improve accuracy.</p>
-
             <h3>Top 10 Most Important Features:</h3>
             <ul class="important-features-grid">
                 <li>Pressure_Sensor_30</li>
@@ -174,15 +169,15 @@
             <div class="visuals">
                 <div class="grid-item">
                     <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
-                    <p><strong>Findings:</strong> Analyzed anomalies in sensor readings to predict system failures before they occurred.</p>
+                    <p><strong>Findings:</strong> Identified anomalies in the sensor data, which correlate with potential system failures. This highlighted the importance of pressure sensors in predictive maintenance.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
-                    <p><strong>Findings:</strong> ARIMA model helped forecast future sensor readings with improved accuracy.</p>
+                    <p><strong>Findings:</strong> The Auto ARIMA model allowed for an efficient and automated approach to forecasting the hydraulic system's time-series data.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
-                    <p><strong>Findings:</strong> Highlighted key features that were most important for predicting failures in the system.</p>
+                    <p><strong>Findings:</strong> The RandomForest model identified key pressure sensors, showing their high importance in detecting system anomalies.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
@@ -198,15 +193,15 @@
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
-                    <p><strong>Findings:</strong> The RandomForest model identified the top 10 most important features for predicting system failures.</p>
+                    <p><strong>Findings:</strong> The most critical features contributing to failure prediction were highlighted by the RandomForest model, further confirming the importance of certain pressure sensors.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
-                    <p><strong>Findings:</strong> Residual analysis from SARIMA indicated good model fit for time-series forecasting.</p>
+                    <p><strong>Findings:</strong> Residuals from the SARIMA model provided insights into its accuracy, showing good model fit for the time-series data.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
-                    <p><strong>Findings:</strong> Showed an overall time-series trend for sensor data, helping identify critical points of failure.</p>
+                    <p><strong>Findings:</strong> Visualizing the overall time-series data helped in understanding the trends and variances across the system's lifespan.</p>
                 </div>
             </div>
         </div>
