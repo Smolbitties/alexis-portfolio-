@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexis Vargas Portfolio</title>
+    <title>Data Science Portfolio</title>
     <style>
-        /* Custom Color Palette */
+        /* Color Palette */
         :root {
             --eerie-black: #1c1c1cff;
             --platinum: #daddd8ff;
@@ -16,10 +16,10 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: var(--ghost-white);
+            background-color: var(--antiflash-white);
             margin: 0;
             padding: 0;
-            text-align: center;
+            color: var(--eerie-black);
         }
 
         .container {
@@ -31,70 +31,124 @@
         h1 {
             text-align: center;
             color: var(--eerie-black);
-            padding-top: 20px;
         }
 
-        h2, h3, p {
+        .project {
+            background-color: var(--ghost-white);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
             color: var(--eerie-black);
-            text-align: left;
         }
 
-        ul {
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--eerie-black);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .important-features {
             list-style-type: none;
             padding: 0;
         }
 
-        ul li {
-            color: #e74c3c;
+        .important-features li {
+            font-size: 18px;
+            color: var(--eerie-black);
             margin-bottom: 10px;
         }
 
-        .grid-container {
+        .visuals {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-            padding: 20px;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .grid-item {
-            background-color: var(--alabaster);
+        .visuals img {
+            max-width: 100%;
             border-radius: 8px;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
-        .grid-item img {
-            width: 100%;
-            height: auto;
+        .visuals .caption {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .about-me {
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
             background-color: var(--eerie-black);
             color: var(--ghost-white);
-            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s;
+            font-size: 16px;
         }
 
         .button:hover {
             background-color: var(--platinum);
+            color: var(--eerie-black);
         }
+
+        /* Grid for top 10 features */
+        .important-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .important-features-grid li {
+            background-color: var(--platinum);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Alexis Vargas Portfolio</h1>
-        <p>Currently pursuing a degree in Computer Science at WGU. Transitioning from teaching physics to data science.</p>
+        <div class="about-me">
+            <p>Currently pursuing a degree in Computer Science at WGU. Transitioning from teaching physics to data science.</p>
+        </div>
 
         <div class="project">
             <h2>Predictive Maintenance of Hydraulic Systems</h2>
             <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
             <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
-            <p><strong>Code:</strong> <a class="button" href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git">View Project Repository</a></p>
-            
+            <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" class="button" target="_blank">View Project Repository</a>
+            <p><strong>Results:</strong> 
+                Using various sensor data points, we applied machine learning models to forecast potential failures. The SARIMA and ARIMA models helped predict time-series behavior, while the RandomForestClassifier identified the most important sensors. The system detected anomalies in pressure readings and offered insights into which sensors are most critical in predictive maintenance efforts.
+            </p>
+
             <h3>Top 10 Most Important Features:</h3>
-            <ul>
+            <ul class="important-features-grid">
                 <li>Pressure_Sensor_30</li>
                 <li>Pressure_Sensor_6</li>
                 <li>Pressure_Sensor_56</li>
@@ -107,14 +161,8 @@
                 <li>Pressure_Sensor_7</li>
             </ul>
 
-            <h3>Background Info:</h3>
-            <p>The hydraulic system data used for the analysis consists of multiple time-series sensor readings. Each sensor measures pressure, temperature, or other operational conditions of the system. The goal of the project is to predict failures before they occur, allowing for preventive maintenance.</p>
-
-            <h3>Process:</h3>
-            <p>We explored the data for anomalies and irregularities, selected the most significant features using a RandomForest model, and implemented time-series models (ARIMA and SARIMA) to forecast behaviors and detect anomalies that may indicate future failures.</p>
-
             <h3>Visuals from the Project:</h3>
-            <div class="grid-container">
+            <div class="visuals">
                 <div class="grid-item">
                     <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
                     <p><strong>Analysis:</strong> Identifies potential anomalies in sensor data that might predict system failures.</p>
@@ -154,5 +202,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
