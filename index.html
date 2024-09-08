@@ -43,6 +43,7 @@
 
         h2 {
             color: var(--eerie-black);
+            text-align: center;
         }
 
         p {
@@ -78,9 +79,10 @@
         }
 
         .visuals img {
-            width: 100%; /* Ensures uniform width */
-            height: 250px; /* Sets a consistent height for all images */
-            object-fit: cover; /* Ensures the image scales properly */
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain; /* Ensure the image scales while keeping aspect ratio */
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
@@ -167,15 +169,15 @@
             <div class="visuals">
                 <div class="grid-item">
                     <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
-                    <p><strong>Findings:</strong> Identifies potential anomalies in sensor data, aiding in predicting system failures and suggesting preventive measures.</p>
+                    <p><strong>Findings:</strong> Identified anomalies in the sensor data, which correlate with potential system failures. This highlighted the importance of pressure sensors in predictive maintenance.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
-                    <p><strong>Findings:</strong> Auto ARIMA provided quick initial forecasts of sensor values, helping highlight key trends for further fine-tuning.</p>
+                    <p><strong>Findings:</strong> The Auto ARIMA model allowed for an efficient and automated approach to forecasting the hydraulic system's time-series data.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
-                    <p><strong>Findings:</strong> Demonstrates which sensors were most critical in detecting faults in the system, guiding maintenance priorities.</p>
+                    <p><strong>Findings:</strong> The RandomForest model identified key pressure sensors, showing their high importance in detecting system anomalies.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
@@ -191,15 +193,15 @@
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
-                    <p><strong>Findings:</strong> Identifies the most critical features contributing to the failure prediction model, which informs where maintenance should focus.</p>
+                    <p><strong>Findings:</strong> The most critical features contributing to failure prediction were highlighted by the RandomForest model, further confirming the importance of certain pressure sensors.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
-                    <p><strong>Findings:</strong> Residuals from the SARIMA model show how well the model fits the time-series data, identifying potential areas of improvement.</p>
+                    <p><strong>Findings:</strong> Residuals from the SARIMA model provided insights into its accuracy, showing good model fit for the time-series data.</p>
                 </div>
                 <div class="grid-item">
                     <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
-                    <p><strong>Findings:</strong> Visualizes the overall time-series data for the sensors, showing critical periods of change in the system behavior.</p>
+                    <p><strong>Findings:</strong> Visualizing the overall time-series data helped in understanding the trends and variances across the system's lifespan.</p>
                 </div>
             </div>
         </div>
