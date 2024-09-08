@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Science Portfolio</title>
     <style>
+        /* Color Palette */
+        :root {
+            --eerie-black: #1c1c1cff;
+            --platinum: #daddd8ff;
+            --alabaster: #ecebe4ff;
+            --antiflash-white: #eef0f2ff;
+            --ghost-white: #fafaffff;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: var(--antiflash-white);
             margin: 0;
             padding: 0;
+            color: var(--eerie-black);
         }
 
         .container {
@@ -20,11 +30,11 @@
 
         h1 {
             text-align: center;
-            color: #333;
+            color: var(--eerie-black);
         }
 
         .project {
-            background-color: #fff;
+            background-color: var(--ghost-white);
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
@@ -32,17 +42,16 @@
         }
 
         h2 {
-            color: #2c3e50;
+            color: var(--eerie-black);
         }
 
         p {
             font-size: 18px;
             line-height: 1.6;
-            color: #333;
         }
 
         a {
-            color: #2980b9;
+            color: var(--eerie-black);
             text-decoration: none;
         }
 
@@ -57,7 +66,7 @@
 
         .important-features li {
             font-size: 18px;
-            color: #e74c3c;
+            color: var(--eerie-black);
             margin-bottom: 10px;
         }
 
@@ -85,6 +94,40 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: var(--eerie-black);
+            color: var(--ghost-white);
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: var(--platinum);
+            color: var(--eerie-black);
+        }
+
+        /* Grid for top 10 features */
+        .important-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .important-features-grid li {
+            background-color: var(--platinum);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -99,11 +142,13 @@
             <h2>Predictive Maintenance of Hydraulic Systems</h2>
             <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
             <p><strong>Solution:</strong> Implemented ARIMA and SARIMA models for time-series forecasting and anomaly detection.</p>
-            <p><strong>Code:</strong> <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" target="_blank">View Project Repository</a></p>
-            <p><strong>Results:</strong> Forecasted sensor values to anticipate system behavior and detected anomalies to assist in preventive maintenance.</p>
+            <a href="https://github.com/Smolbitties/predictive-maintenance-of-hydraulic-systems.git" class="button" target="_blank">View Project Repository</a>
+            <p><strong>Results:</strong> 
+                Using various sensor data points, we applied machine learning models to forecast potential failures. The SARIMA and ARIMA models helped predict time-series behavior, while the RandomForestClassifier identified the most important sensors. The system detected anomalies in pressure readings and offered insights into which sensors are most critical in predictive maintenance efforts.
+            </p>
 
             <h3>Top 10 Most Important Features:</h3>
-            <ul class="important-features">
+            <ul class="important-features-grid">
                 <li>Pressure_Sensor_30</li>
                 <li>Pressure_Sensor_6</li>
                 <li>Pressure_Sensor_56</li>
@@ -116,42 +161,43 @@
                 <li>Pressure_Sensor_7</li>
             </ul>
 
+            <h3>Visuals from the Project:</h3>
             <div class="visuals">
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
-                    <div class="caption">Anomalies detected for Pressure_Sensor_30</div>
+                    <p><strong>Analysis:</strong> Identifies potential anomalies in sensor data that might predict system failures.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
-                    <div class="caption">Auto ARIMA Forecast</div>
+                    <p><strong>Analysis:</strong> Forecasts sensor values using the Auto ARIMA model for time-series analysis.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
-                    <div class="caption">Top Features Importance Bar Plot</div>
+                    <p><strong>Analysis:</strong> Highlights the most important features for predicting system failures.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
-                    <div class="caption">Confusion Matrix</div>
+                    <p><strong>Analysis:</strong> Shows the model's classification accuracy and performance.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
-                    <div class="caption">Manual ARIMA Forecast</div>
+                    <p><strong>Analysis:</strong> Forecasts sensor values using a manually tuned ARIMA model.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/WeTiE7E.png" alt="Manual SARIMA">
-                    <div class="caption">Manual SARIMA Forecast</div>
+                    <p><strong>Analysis:</strong> Implements SARIMA to handle seasonality in time-series forecasting.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
-                    <div class="caption">Most Important Features</div>
+                    <p><strong>Analysis:</strong> The most critical features contributing to failure prediction were highlighted by the RandomForest model.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
-                    <div class="caption">SARIMA Model Residuals</div>
+                    <p><strong>Analysis:</strong> Residuals from the SARIMA model show how well the model fits the time-series data.</p>
                 </div>
-                <div>
+                <div class="grid-item">
                     <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
-                    <div class="caption">Time Series for Pressure_Sensor_30</div>
+                    <p><strong>Analysis:</strong> Visualizes the overall time-series data for the sensors in the hydraulic system.</p>
                 </div>
             </div>
         </div>
