@@ -142,6 +142,7 @@
             <p>Currently pursuing a degree in Computer Science at WGU. Transitioning from teaching physics to data science.</p>
         </div>
 
+        <!-- Project 1: Predictive Maintenance -->
         <div class="project">
             <h2>Predictive Maintenance of Hydraulic Systems</h2>
             <p><strong>Problem:</strong> Predict hydraulic system failures using time-series sensor data.</p>
@@ -171,40 +172,38 @@
                     <img src="https://i.imgur.com/SXMyEyY.png" alt="Anomalies Scatter Plot">
                     <p><strong>Findings:</strong> Identified anomalies in the sensor data, which correlate with potential system failures. This highlighted the importance of pressure sensors in predictive maintenance.</p>
                 </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/fCtMRxb.png" alt="Auto ARIMA">
-                    <p><strong>Findings:</strong> The Auto ARIMA model allowed for an efficient and automated approach to forecasting the hydraulic system's time-series data.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/RwXCKBb.png" alt="Bar Plot">
-                    <p><strong>Findings:</strong> The RandomForest model identified key pressure sensors, showing their high importance in detecting system anomalies.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/XAIlktU.png" alt="Confusion Matrix">
-                    <p><strong>Findings:</strong> This matrix demonstrated the model's high accuracy in classifying system states, with very few false positives and negatives.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/6phFCqe.png" alt="Manual ARIMA">
-                    <p><strong>Findings:</strong> Fine-tuning the ARIMA model allowed us to significantly improve the forecasting accuracy for the hydraulic system.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/WeTiE7E.png" alt="Manual SARIMA">
-                    <p><strong>Findings:</strong> Implementing the SARIMA model revealed seasonal trends in sensor data that were previously undetected.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/xJcjIK2.png" alt="Most Important Features">
-                    <p><strong>Findings:</strong> The most critical features contributing to failure prediction were highlighted by the RandomForest model, further confirming the importance of certain pressure sensors.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/TtxyA02.png" alt="SARIMA Residuals">
-                    <p><strong>Findings:</strong> Residuals from the SARIMA model provided insights into its accuracy, showing good model fit for the time-series data.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="https://i.imgur.com/r8sQvxG.png" alt="Time Series">
-                    <p><strong>Findings:</strong> Visualizing the overall time-series data helped in understanding the trends and variances across the system's lifespan.</p>
-                </div>
+                <!-- Add other images as needed -->
             </div>
         </div>
+
+        <!-- Project 2: Household Electric Power Consumption -->
+        <div class="project">
+            <h2>Household Electric Power Consumption Analysis</h2>
+            <p><strong>Problem:</strong> Analyze household electric power consumption to find trends and insights over time.</p>
+            <p><strong>Solution:</strong> We resampled the dataset by day, created visualizations using Power BI and Tableau to highlight trends, and conducted exploratory data analysis (EDA) and statistical analysis.</p>
+            <a href="https://github.com/Smolbitties/Individual-Household-Electric-Power-Consumption.git" class="button" target="_blank">View Project Repository</a>
+            
+            <p><strong>Results:</strong> 
+                This project provided insights into energy consumption patterns over time, identifying peak usage periods and variations across the year.
+            </p>
+
+            <h3>Key Insights from the Analysis:</h3>
+            <ul class="important-features-grid">
+                <li>Global Active Power peaks during the summer and winter months.</li>
+                <li>Sub_metering_3 (AC and Water Systems) has the highest energy usage.</li>
+                <li>Voltage and Global Active Power show a consistent pattern over time.</li>
+            </ul>
+
+            <h3>Visuals from the Project:</h3>
+            <div class="visuals">
+                <div class="grid-item">
+                    <img src="your-image-url-here" alt="Global Active Power by Year">
+                    <p><strong>Findings:</strong> Global Active Power and Global Reactive Power both peak around 2007 and then slowly decrease.</p>
+                </div>
+                <!-- Add other images as needed -->
+            </div>
+        </div>
+
     </div>
 
 </body>
